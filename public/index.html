@@ -1692,7 +1692,7 @@
 
 
 <!-- app footer -->
-<footer class="relative bg-zinc-700 py-8 md:pb-11 md:pt-[62px]">
+<footer class="absolute bg-zinc-700 py-8 md:pb-11 md:pt-[62px]">
     <svg class="absolute top-0 right-0 left-0 mx-auto hidden md:inline-block text-gray-100 dark:text-zinc-800 w-[100px] h-[22px]">
         <use href="#curve-footer"></use>
     </svg>
@@ -1824,6 +1824,7 @@
    const swiper = new Swiper('.swiper', {
         slidesPerView: 1,
         spaceBetween: 10,
+        loop: true,    
         pagination: {
             el: '.swiper-pagination',
             clickable: true,
@@ -1847,17 +1848,6 @@
             },
         },
     });
-    document.querySelector('.swiper-button-next-custom').addEventListener('click', () => {
-    if (swiper.isEnd) {
-        swiper.slideTo(0); // بازگشت به ابتدای اسلایدر
-    }
-});
-
-document.querySelector('.swiper-button-prev-custom').addEventListener('click', () => {
-    if (swiper.isBeginning) {
-        swiper.slideTo(swiper.slides.length - 1); // رفتن به انتهای اسلایدر
-    }
-});
 </script>
 </body>
 </html>
